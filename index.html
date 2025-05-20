@@ -310,6 +310,75 @@
                 font-size: 1rem;
             }
         }
+
+        /* Estilos para a seção de parceiros */
+        .partners {
+            padding: 4rem 2rem;
+            background: #f9f9f9;
+        }
+
+        .partners h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .partner-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .partner-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .partner-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .partners {
+                padding: 2rem 1rem;
+            }
+
+            .partners h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .partner-item {
+                padding: 1rem;
+            }
+
+            .partner-item img {
+                max-height: 80px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -477,6 +546,11 @@
             </div>
         </section>
 
+        <section id="parceiros" class="partners">
+            <h2>Nossos Parceiros</h2>
+            <div class="partners-grid" id="partnersGrid"></div>
+        </section>
+
         <section id="contato" class="contact">
             <h2>Entre em Contato</h2>
             <div class="contact-container">
@@ -545,6 +619,52 @@
             'vigaço img/obras/SOLAR/Design-sem-nome-90.jpg'
         ];
 
+        // Array com os caminhos das imagens dos parceiros
+        const parceiros = [
+            "vigaço img/parceiros/AVATIM.png",
+            "vigaço img/parceiros/PREFRIANAPOLIS.png",
+            "vigaço img/parceiros/KRAFT HEINZ.png",
+            "vigaço img/parceiros/SINDICATO-RURAL-DE-ANAPOLIS.png",
+            "vigaço img/parceiros/RIANAPOLIS1.png",
+            "vigaço img/parceiros/SANTYA-RITA-DO-NOVO-DESTINO.png",
+            "vigaço img/parceiros/POLICORDAS.png",
+            "vigaço img/parceiros/PREF EDEIA.png",
+            "vigaço img/parceiros/PREF VILA PROPICIO.png",
+            "vigaço img/parceiros/OTIMZE SALAS LIMPAS.png",
+            "vigaço img/parceiros/COLATEXX COLORE.jpg",
+            "vigaço img/parceiros/KELDRIN.png",
+            "vigaço img/parceiros/PREF ITUMBIARA.png",
+            "vigaço img/parceiros/GRUPO-JOSE-ALVES.jpeg",
+            "vigaço img/parceiros/INSTITUTO DA SAUDE.png",
+            "vigaço img/parceiros/IQ UFG.png",
+            "vigaço img/parceiros/PREF GOIANAPOLIS.jpg",
+            "vigaço img/parceiros/CARREFOUR.png",
+            "vigaço img/parceiros/COCA COLA.png",
+            "vigaço img/parceiros/BREJEIRO.png",
+            "vigaço img/parceiros/CALDAS-NOVAS.png",
+            "vigaço img/parceiros/CANAL-GESTAO.png",
+            "vigaço img/parceiros/BRAINFARMA.png",
+            "vigaço img/parceiros/BRASIL-PARK-SHOPPING.png",
+            "vigaço img/parceiros/ABADIANIA1 - Copia.png",
+            "vigaço img/parceiros/EXP.jpg",
+            "vigaço img/parceiros/BRAGA ENGENHARIA.png",
+            "vigaço img/parceiros/PREF ABADIANIA.png",
+            "vigaço img/parceiros/ADUBOS ARAGUAIA.png",
+            "vigaço img/parceiros/ABADIANIA1-1 - Copia.png",
+            "vigaço img/parceiros/BRAGA-ENGENHARIA.jpg",
+            "vigaço img/parceiros/ADUBOS-ARAGUAIA - Copia.png",
+            "vigaço img/parceiros/DEYE.jpg",
+            "vigaço img/parceiros/APsystems.jpg",
+            "vigaço img/parceiros/GROWATT.png",
+            "vigaço img/parceiros/OSDN SOLAR.jpg",
+            "vigaço img/parceiros/OSDA.png",
+            "vigaço img/parceiros/sunova.jpg",
+            "vigaço img/parceiros/TOPSOLAR.png",
+            "vigaço img/parceiros/aldo solar.png",
+            "vigaço img/parceiros/NANO ENRGI.png",
+            "vigaço img/parceiros/SOLFACIL.png"
+        ];
+
         // Função para inicializar o carrossel
         function initCarousel() {
             const slidesContainer = document.getElementById('carouselSlides');
@@ -606,6 +726,20 @@
 
         // Inicializar o carrossel quando o DOM estiver carregado
         document.addEventListener('DOMContentLoaded', initCarousel);
+
+        // Renderizar as miniaturas dos parceiros
+        const grid = document.getElementById('partnersGrid');
+        if (grid) {
+            parceiros.forEach(src => {
+                const div = document.createElement('div');
+                div.className = 'partner-item';
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = src.split('/').pop().replace(/\.[^/.]+$/, '');
+                div.appendChild(img);
+                grid.appendChild(div);
+            });
+        }
     </script>
 </body>
 </html> 
