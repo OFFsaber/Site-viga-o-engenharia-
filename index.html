@@ -7,6 +7,233 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* NAVBAR FULL WIDTH E LOGO MAIOR */
+        .header {
+            width: 100vw;
+            max-width: 100vw;
+            border-radius: 0 0 1cm 1cm;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        .nav-container {
+            max-width: 100vw;
+            padding: 1rem 2vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .logo-img {
+            height: 80px;
+            width: auto;
+            border-radius: 8px;
+        }
+        .logo-text h1 {
+            font-size: 2.6rem;
+        }
+        .nav-menu {
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        .nav-menu li {
+            white-space: nowrap;
+        }
+        @media (max-width: 900px) {
+            .logo-img { height: 56px; }
+            .logo-text h1 { font-size: 1.5rem; }
+        }
+        /* SOBRE NÓS - FOTOS ALINHADAS E MAPA */
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-text {
+            flex: 2 1 400px;
+            text-align: center;
+        }
+        .about-images {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .about-image {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .about-maps {
+            margin-top: 18px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .about-maps a {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px #0002;
+            transition: box-shadow 0.2s;
+        }
+        .about-maps a:hover {
+            box-shadow: 0 6px 24px #0003;
+        }
+        .about-maps iframe {
+            width: 340px;
+            height: 180px;
+            border: none;
+        }
+        @media (max-width: 900px) {
+            .about-content { flex-direction: column; align-items: center; gap: 20px; }
+            .about-images { flex-direction: row; justify-content: center; }
+        }
+        .nav-social {
+            display: flex;
+            align-items: center;
+            margin-left: 18px;
+            margin-right: 8px;
+        }
+        @media (max-width: 900px) {
+            .nav-social { display: none; }
+        }
+        /* SOBRE NÓS - UMA IMAGEM GRANDE ALINHADA AO TEXTO */
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-text {
+            flex: 2 1 400px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-image {
+            width: 340px;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            align-self: center;
+        }
+        .about-images { display: none; }
+        @media (max-width: 900px) {
+            .about-content { flex-direction: column; align-items: center; gap: 20px; }
+            .about-image { width: 98vw; max-width: 98vw; max-height: 220px; }
+        }
+        /* Estilos do Carrossel */
+        .carousel-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .carousel-button:hover {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .carousel-button.prev {
+            left: 20px;
+        }
+
+        .carousel-button.next {
+            right: 20px;
+        }
+
+        .carousel-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .carousel-thumbnail {
+            width: 80px;
+            height: 60px;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .carousel-thumbnail.active {
+            opacity: 1;
+            border: 2px solid #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-slide img {
+                height: 300px;
+            }
+
+            .carousel-button {
+                width: 30px;
+                height: 30px;
+            }
+
+            .carousel-thumbnail {
+                width: 60px;
+                height: 45px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -23,24 +250,28 @@
                 <li class="dropdown">
                     <a href="#servicos">Nossos Serviços <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><strong>Arquitetura</strong></li>
-                        <li>Elétrico</li>
-                        <li>Hidrossanitário</li>
-                        <li>Cabeamento Estruturado</li>
-                        <li>Estrutural Metálico</li>
-                        <li>Estrutural em Concreto Armado</li>
-                        <li>Muro de Contenções</li>
-                        <li>Ar-Condicionado</li>
-                        <li>Laudos Técnicos</li>
+                        <li><a href="servico-arquitetura.html" target="_blank">Arquitetura</a></li>
+                        <li><a href="servico-eletrico.html" target="_blank">Elétrico</a></li>
+                        <li><a href="servico-hidrossanitario.html" target="_blank">Hidrossanitário</a></li>
+                        <li><a href="servico-cabeamento.html" target="_blank">Cabeamento Estruturado</a></li>
+                        <li><a href="servico-estrutural-metalico.html" target="_blank">Estrutural Metálico</a></li>
+                        <li><a href="servico-estrutural-concreto.html" target="_blank">Estrutural em Concreto Armado</a></li>
+                        <li><a href="servico-muro.html" target="_blank">Muro de Contenções</a></li>
+                        <li><a href="servico-ar-condicionado.html" target="_blank">Ar-Condicionado</a></li>
+                        <li><a href="servico-laudos.html" target="_blank">Laudos Técnicos</a></li>
                     </ul>
                 </li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Fale Conosco</a></li>
+                <li><a href="#contato">Economize na sua obra</a></li>
             </ul>
+            <div class="nav-social">
+                <a href="https://www.instagram.com/vigaco.eng/" target="_blank" title="Instagram" style="margin-right:10px;"><i class="fab fa-instagram" style="font-size:1.6rem;color:#3498db;"></i></a>
+                <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="font-size:1.6rem;color:#3498db;"></i></a>
+            </div>
             <div class="top-contact">
-                <i class="fas fa-phone"></i> <span>(00) 0000-0000</span>
+                <i class="fas fa-phone"></i> <a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 99356-7625</a>
             </div>
             <div class="menu-mobile">
                 <i class="fas fa-bars"></i>
@@ -53,7 +284,7 @@
             <div class="hero-content">
                 <h2>Excelência em Engenharia</h2>
                 <p>Transformando ideias em projetos de sucesso</p>
-                <a href="#contato" class="cta-button">Solicite um Orçamento</a>
+                <a href="#contato" class="cta-button">Torne seu SONHO REALIDADE com economia e qualidade que so a Vigaço pode oferecer</a>
             </div>
         </section>
 
@@ -61,69 +292,111 @@
             <h2>Nossos Serviços</h2>
             <div class="services-grid">
                 <div class="service-card" onclick="window.open('servico-arquitetura.html', '_blank')">
-                    <img src="https://drive.google.com/uc?export=view&id=1WWiNRO39SkvZuBrmV0nPbR7EV07sOI-T" alt="Projeto Arquitetônico" class="service-image">
+                    <img src="imagens-servicos/arquitetura/ARQUITETURA/Corpo-5.png" alt="Projeto Arquitetônico" class="service-image">
                     <i class="fas fa-drafting-compass"></i>
                     <h3>Arquitetura</h3>
                     <p>Projetos arquitetônicos completos, funcionais e modernos que transformam espaços em ambientes extraordinários.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-eletrico.html', '_blank')">
-                    <img src="https://drive.google.com/uc?export=view&id=1szGtzUeEAL6O_Uo7BXxJSFzE8O9V3meF" alt="Projeto Elétrico" class="service-image">
+                    <img src="imagens-servicos/eletrico/ELETRICO/Corpo-1.png" alt="Projeto Elétrico" class="service-image">
                     <i class="fas fa-bolt"></i>
                     <h3>Elétrico</h3>
                     <p>Projetos elétricos residenciais, comerciais e industriais com foco em segurança e eficiência energética.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-hidrossanitario.html', '_blank')">
-                    <img src="https://drive.google.com/uc?export=view&id=1KNGeERJ6CBcmsS6hxDLYqeQ_gybjdq3h" alt="Projeto Hidrossanitário" class="service-image">
+                    <img src="imagens-servicos/hidrossanitario/HIDROSSANITARIO/Corpo-1.png" alt="Projeto Hidrossanitário" class="service-image">
                     <i class="fas fa-tint"></i>
                     <h3>Hidrossanitário</h3>
                     <p>Soluções eficientes para instalações hidráulicas e sanitárias, garantindo conforto e sustentabilidade.</p>
                 </div>
-                <div class="service-card"><i class="fas fa-network-wired"></i><h3>Cabeamento Estruturado</h3><p>Infraestrutura de redes e comunicação para sua obra.</p></div>
-                <div class="service-card"><i class="fas fa-industry"></i><h3>Estrutural Metálico</h3><p>Projetos e execução de estruturas metálicas.</p></div>
-                <div class="service-card"><i class="fas fa-cube"></i><h3>Estrutural em Concreto Armado</h3><p>Projetos estruturais robustos e seguros.</p></div>
-                <div class="service-card"><i class="fas fa-mountain"></i><h3>Muro de Contenções</h3><p>Projetos de contenção para segurança e estabilidade.</p></div>
-                <div class="service-card"><i class="fas fa-snowflake"></i><h3>Ar-Condicionado</h3><p>Projetos de climatização eficientes e econômicos.</p></div>
-                <div class="service-card"><i class="fas fa-file-alt"></i><h3>Laudos Técnicos</h3><p>Emissão de laudos e pareceres técnicos especializados.</p></div>
+                <div class="service-card" onclick="window.open('servico-cabeamento.html', '_blank')">
+                    <img src="imagens-servicos/cabeamento/CABEAMENTO/Corpo-1.png" alt="Cabeamento Estruturado" class="service-image">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Cabeamento Estruturado</h3>
+                    <p>Infraestrutura de redes e comunicação para sua obra.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-estrutural-metalico.html', '_blank')">
+                    <img src="imagens-servicos/estrutural-metalico/ESTRUTURAL-METALICO/Corpo-1.png" alt="Estrutural Metálico" class="service-image">
+                    <i class="fas fa-industry"></i>
+                    <h3>Estrutural Metálico</h3>
+                    <p>Projetos e execução de estruturas metálicas.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-estrutural-concreto.html', '_blank')">
+                    <img src="imagens-servicos/estrutural-concreto/ESTRUTURAL-CONCRETO/Corpo-1.png" alt="Estrutural em Concreto Armado" class="service-image">
+                    <i class="fas fa-cube"></i>
+                    <h3>Estrutural em Concreto Armado</h3>
+                    <p>Projetos estruturais robustos e seguros.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-muro.html', '_blank')">
+                    <img src="imagens-servicos/muro/MURO/Corpo-1.png" alt="Muro de Contenções" class="service-image">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Muro de Contenções</h3>
+                    <p>Projetos de contenção para segurança e estabilidade.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-ar-condicionado.html', '_blank')">
+                    <img src="imagens-servicos/ar-condicionado/AR-CONDICIONADO/Corpo-1.png" alt="Ar-Condicionado" class="service-image">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Ar-Condicionado</h3>
+                    <p>Projetos de climatização eficientes e econômicos.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-laudos.html', '_blank')">
+                    <img src="imagens-servicos/laudos/LAUDOS/Corpo-1.png" alt="Laudos Técnicos" class="service-image">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Laudos Técnicos</h3>
+                    <p>Emissão de laudos e pareceres técnicos especializados.</p>
+                </div>
             </div>
         </section>
 
         <section id="como-funciona" class="how-it-works">
             <h2>Como Funciona</h2>
             <div class="how-steps">
-                <div class="how-step"><span>1</span><h3>Contato Inicial</h3><p>Você entra em contato e nos conta sua necessidade.</p></div>
-                <div class="how-step"><span>2</span><h3>Orçamento Personalizado</h3><p>Analisamos o projeto e enviamos uma proposta sob medida.</p></div>
-                <div class="how-step"><span>3</span><h3>Execução do Projeto</h3><p>Desenvolvemos e acompanhamos todas as etapas do projeto.</p></div>
-                <div class="how-step"><span>4</span><h3>Entrega e Suporte</h3><p>Entregamos o projeto finalizado e oferecemos suporte pós-obra.</p></div>
+                <div class="how-step"><span>1</span><h3>Contato Inicial</h3><p>Marcamos um horario para uma reunião e conversamos sobre o suas nescessidades.</p></div>
+                <div class="how-step"><span>2</span><h3>Orçamento Personalizado</h3><p>Analisamos o projeto e faremos uma proposta de investimentopara tornar o seu SONHO em REALIDADE .</p></div>
+                <div class="how-step"><span>3</span><h3>Execução do Projeto</h3><p>Desenvolvemos e acompanhamos todas as etapas do projeto para garantir qualidade,segurança e principalmente economia.</p></div>
+                <div class="how-step"><span>4</span><h3>Entrega e Suporte</h3><p>Entregamos o projeto finalizado e oferecemos suporte pós-obra para garantir que oque era apenas um sonho se torne uma realidade.</p></div>
             </div>
         </section>
 
         <section id="projetos" class="projects">
             <h2>Projetos em Destaque</h2>
-            <div class="projects-grid">
-                <!-- Projetos serão adicionados dinamicamente via JavaScript -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <!-- Slides serão inseridos via JavaScript -->
+                    </div>
+                    <button class="carousel-button prev" id="prevButton">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-button next" id="nextButton">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-thumbnails" id="carouselThumbnails">
+                    <!-- Miniaturas serão inseridas via JavaScript -->
+                </div>
             </div>
         </section>
 
         <section id="sobre" class="about">
             <div class="about-content">
-                <h2>Sobre Nós</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>A VIGAÇO ENGENHARIA & PROJETOS é uma empresa especializada em engenharia, comprometida com a excelência e inovação em cada projeto. Nossa equipe de profissionais altamente qualificados está pronta para transformar suas ideias em realidade.</p>
-                        <p>Com mais de 10 anos de experiência no mercado, nos destacamos por:</p>
-                        <ul>
-                            <li>Equipe técnica altamente qualificada</li>
-                            <li>Compromisso com prazos e qualidade</li>
-                            <li>Atendimento personalizado</li>
-                            <li>Projetos sustentáveis e inovadores</li>
-                            <li>Suporte completo durante toda a obra</li>
-                        </ul>
-                    </div>
-                    <div class="about-images">
-                        <img src="https://drive.google.com/uc?export=view&id=1ZGSrt0PBPZt92d5AP4tCRSaH590c0EUO" alt="Nossa Equipe" class="about-image">
-                        <img src="https://drive.google.com/uc?export=view&id=1LHsJDq9vNDV90mSNqIQUEUDLgcaQWOpn" alt="Nosso Escritório" class="about-image">
-                    </div>
+                <div class="about-text">
+                    <h2>Sobre Nós</h2>
+                    <p>A VIGAÇO ENGENHARIA & PROJETOS é uma empresa especializada em engenharia, comprometida com a excelência e inovação em cada projeto. Nossa equipe de profissionais altamente qualificados está pronta para transformar suas ideias em realidade.<br>Com mais de 10 anos de experiência no mercado, nos destacamos por:</p>
+                    <ul style="text-align:left;max-width:400px;margin:1.5rem auto 0 auto;">
+                        <li>Equipe técnica altamente qualificada</li>
+                        <li>Compromisso com prazos e qualidade</li>
+                        <li>Atendimento personalizado</li>
+                        <li>Projetos sustentáveis e inovadores</li>
+                        <li>Suporte completo durante toda a obra</li>
+                    </ul>
                 </div>
+                <img src="imagens-servicos/arquitetura/ARQUITETURA/IMG-20240518-WA0071.jpg" alt="Fachada Vigaço" class="about-image">
+            </div>
+            <div class="about-maps">
+                <a href="https://www.google.com/maps/place/Vigaço+Engenharia/@-16.326233,-48.918184,14z/data=!4m14!1m7!3m6!1s0x935ea51ea967adbb:0x34e69e98b2969765!2sVigaço+Engenharia!8m2!3d-16.3262333!4d-48.9181837!16s%2Fg%2F11vxmd876c!3m5!1s0x935ea51ea967adbb:0x34e69e98b2969765!8m2!3d-16.3262333!4d-48.9181837!16s%2Fg%2F11vxmd876c!5m1!1e1?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Ver rota até a Vigaço Engenharia">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.23496429581!2d-48.92037268468744!3d-16.32623328872659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ea51ea967adbb%3A0x34e69e98b2969765!2sVigaço+Engenharia!5e0!3m2!1spt-BR!2sbr!4v1718212345678!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
             </div>
         </section>
 
@@ -140,16 +413,27 @@
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Endereço da Empresa</p>
+                        <p>RUA PB 08 QD. 43 LT. 05 E 06 PARQUE BRASÍLIA 2ª ETAPA ANÁPOLIS-GO CEP: 75.093-760</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <p>(00) 0000-0000</p>
+                        <p><a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 99356-7625</a></p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <p>contato@vigacoengenharia.com.br</p>
                     </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin:2.5rem 0 0 0;">
+                <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.2rem;">
+                    <a href="https://www.instagram.com/vigaco.eng/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;color:#3498db;font-weight:600;font-size:1.1rem;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:28px;height:28px;"> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;color:#3498db;font-weight:600;font-size:1.1rem;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:28px;height:28px;"> LinkedIn
+                    </a>
+                    <!-- Seu link aqui: <a href="#" target="_blank">Outra Rede</a> -->
                 </div>
             </div>
         </section>
@@ -162,16 +446,88 @@
                 <p>Excelência em projetos e soluções</p>
             </div>
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/vigaco.eng/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- Seu link aqui: <a href="#" target="_blank"><i class="fab fa-xxx"></i></a> -->
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 VIGAÇO ENGENHARIA & PROJETOS. Todos os direitos reservados.</p>
+            <p>&copy; 2025 VIGAÇO ENGENHARIA & PROJETOS.  by ELSE SISTEMS Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Array com os caminhos das imagens dos projetos
+        const projetos = [
+            'vigaço img/obras/SOLAR/Design-sem-nome-93.jpg',
+            'vigaço img/obras/SOLAR/Design-sem-nome-94.jpg',
+            'vigaço img/obras/SOLAR/Design-sem-nome-92.jpg',
+            'vigaço img/obras/SOLAR/Design-sem-nome-91.jpg',
+            'vigaço img/obras/SOLAR/Design-sem-nome-90.jpg'
+        ];
+
+        // Função para inicializar o carrossel
+        function initCarousel() {
+            const slidesContainer = document.getElementById('carouselSlides');
+            const thumbnailsContainer = document.getElementById('carouselThumbnails');
+            let currentSlide = 0;
+
+            // Criar slides
+            projetos.forEach((projeto, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide';
+                slide.innerHTML = `<img src="${projeto}" alt="Projeto ${index + 1}">`;
+                slidesContainer.appendChild(slide);
+
+                // Criar miniaturas
+                const thumbnail = document.createElement('img');
+                thumbnail.src = projeto;
+                thumbnail.className = 'carousel-thumbnail';
+                thumbnail.alt = `Miniatura ${index + 1}`;
+                thumbnail.onclick = () => goToSlide(index);
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+
+            // Função para ir para um slide específico
+            function goToSlide(index) {
+                currentSlide = index;
+                updateCarousel();
+            }
+
+            // Função para atualizar o carrossel
+            function updateCarousel() {
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Atualizar miniaturas ativas
+                document.querySelectorAll('.carousel-thumbnail').forEach((thumb, index) => {
+                    thumb.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            // Event listeners para os botões
+            document.getElementById('prevButton').addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + projetos.length) % projetos.length;
+                updateCarousel();
+            });
+
+            document.getElementById('nextButton').addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % projetos.length;
+                updateCarousel();
+            });
+
+            // Iniciar com o primeiro slide
+            updateCarousel();
+
+            // Auto-play (opcional)
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % projetos.length;
+                updateCarousel();
+            }, 5000);
+        }
+
+        // Inicializar o carrossel quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    </script>
 </body>
 </html> 
