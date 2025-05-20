@@ -233,6 +233,83 @@
                 height: 45px;
             }
         }
+        /* Estilos para os novos botões de contato */
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .info-item i {
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .whatsapp-button, .email-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+        }
+
+        .email-button {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .whatsapp-button:hover, .email-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .whatsapp-button i, .email-button i {
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 1rem;
+            }
+
+            .info-item {
+                font-size: 1rem;
+            }
+
+            .whatsapp-button, .email-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -271,7 +348,7 @@
                 <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="font-size:1.6rem;color:#3498db;"></i></a>
             </div>
             <div class="top-contact">
-                <i class="fas fa-phone"></i> <a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 99356-7625</a>
+                <i class="fas fa-phone"></i> <a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 99356-7625</a> <!-- NÚMERO WPP: 5562993567625 - MENSAGEM WPP: Olá, gostaria de agendar um horário para falar com um consultor da Vigaço! -->
             </div>
             <div class="menu-mobile">
                 <i class="fas fa-bars"></i>
@@ -298,49 +375,49 @@
                     <p>Projetos arquitetônicos completos, funcionais e modernos que transformam espaços em ambientes extraordinários.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-eletrico.html', '_blank')">
-                    <img src="imagens-servicos/eletrico/ELETRICO/Corpo-1.png" alt="Projeto Elétrico" class="service-image">
+                    <img src="imagens-servicos\eletrico\E001.jpeg" alt="Projeto Elétrico" class="service-image">
                     <i class="fas fa-bolt"></i>
                     <h3>Elétrico</h3>
                     <p>Projetos elétricos residenciais, comerciais e industriais com foco em segurança e eficiência energética.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-hidrossanitario.html', '_blank')">
-                    <img src="imagens-servicos/hidrossanitario/HIDROSSANITARIO/Corpo-1.png" alt="Projeto Hidrossanitário" class="service-image">
+                    <img src="imagens-servicos\hidrossanitario\HIDROSANITARIO\projeto-hidraulico-justo-santos.jpg" alt="Projeto Hidrossanitário" class="service-image">
                     <i class="fas fa-tint"></i>
                     <h3>Hidrossanitário</h3>
                     <p>Soluções eficientes para instalações hidráulicas e sanitárias, garantindo conforto e sustentabilidade.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-cabeamento.html', '_blank')">
-                    <img src="imagens-servicos/cabeamento/CABEAMENTO/Corpo-1.png" alt="Cabeamento Estruturado" class="service-image">
+                    <img src="imagens-servicos\cabeamento\c001.jpeg" alt="Cabeamento Estruturado" class="service-image">
                     <i class="fas fa-network-wired"></i>
                     <h3>Cabeamento Estruturado</h3>
                     <p>Infraestrutura de redes e comunicação para sua obra.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-estrutural-metalico.html', '_blank')">
-                    <img src="imagens-servicos/estrutural-metalico/ESTRUTURAL-METALICO/Corpo-1.png" alt="Estrutural Metálico" class="service-image">
+                    <img src="imagens-servicos\estrutural-metalico\M001.jpeg" alt="Estrutural Metálico" class="service-image">
                     <i class="fas fa-industry"></i>
                     <h3>Estrutural Metálico</h3>
                     <p>Projetos e execução de estruturas metálicas.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-estrutural-concreto.html', '_blank')">
-                    <img src="imagens-servicos/estrutural-concreto/ESTRUTURAL-CONCRETO/Corpo-1.png" alt="Estrutural em Concreto Armado" class="service-image">
+                    <img src="imagens-servicos\estrutural-concreto\CONCRETO ARMADO\Corpo-7.png" alt="Estrutural em Concreto Armado" class="service-image">
                     <i class="fas fa-cube"></i>
                     <h3>Estrutural em Concreto Armado</h3>
                     <p>Projetos estruturais robustos e seguros.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-muro.html', '_blank')">
-                    <img src="imagens-servicos/muro/MURO/Corpo-1.png" alt="Muro de Contenções" class="service-image">
+                    <img src="imagens-servicos\muro\MU001.jpeg" alt="Muro de Contenções" class="service-image">
                     <i class="fas fa-mountain"></i>
                     <h3>Muro de Contenções</h3>
                     <p>Projetos de contenção para segurança e estabilidade.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-ar-condicionado.html', '_blank')">
-                    <img src="imagens-servicos/ar-condicionado/AR-CONDICIONADO/Corpo-1.png" alt="Ar-Condicionado" class="service-image">
+                    <img src="imagens-servicos\ar-condicionado\AR001.jpeg" alt="Ar-Condicionado" class="service-image">
                     <i class="fas fa-snowflake"></i>
                     <h3>Ar-Condicionado</h3>
                     <p>Projetos de climatização eficientes e econômicos.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-laudos.html', '_blank')">
-                    <img src="imagens-servicos/laudos/LAUDOS/Corpo-1.png" alt="Laudos Técnicos" class="service-image">
+                    <img src="imagens-servicos\laudos\LA001.jpeg" alt="Laudos Técnicos" class="service-image">
                     <i class="fas fa-file-alt"></i>
                     <h3>Laudos Técnicos</h3>
                     <p>Emissão de laudos e pareceres técnicos especializados.</p>
@@ -391,7 +468,7 @@
                         <li>Suporte completo durante toda a obra</li>
                     </ul>
                 </div>
-                <img src="imagens-servicos/arquitetura/ARQUITETURA/IMG-20240518-WA0071.jpg" alt="Fachada Vigaço" class="about-image">
+                <img src="imagens-servicos\sobre nos.jpg" alt="Fachada Vigaço" class="about-image">
             </div>
             <div class="about-maps">
                 <a href="https://www.google.com/maps/place/Vigaço+Engenharia/@-16.326233,-48.918184,14z/data=!4m14!1m7!3m6!1s0x935ea51ea967adbb:0x34e69e98b2969765!2sVigaço+Engenharia!8m2!3d-16.3262333!4d-48.9181837!16s%2Fg%2F11vxmd876c!3m5!1s0x935ea51ea967adbb:0x34e69e98b2969765!8m2!3d-16.3262333!4d-48.9181837!16s%2Fg%2F11vxmd876c!5m1!1e1?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Ver rota até a Vigaço Engenharia">
@@ -403,13 +480,6 @@
         <section id="contato" class="contact">
             <h2>Entre em Contato</h2>
             <div class="contact-container">
-                <form id="contact-form" class="contact-form">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="tel" placeholder="Telefone">
-                    <textarea placeholder="Mensagem" required></textarea>
-                    <button type="submit" class="submit-button">Enviar Mensagem</button>
-                </form>
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -417,12 +487,22 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <p><a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 99356-7625</a></p>
+                        <p><a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 99356-7625</a></p> <!-- NÚMERO WPP: 5562993567625 - MENSAGEM WPP: Olá, gostaria de agendar um horário para falar com um consultor da Vigaço! -->
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p>contato@vigacoengenharia.com.br</p>
+                        <p><a href="mailto:contato@vigacoengenharia.com.br" style="color:#3498db;text-decoration:none;font-weight:600;">contato@vigacoengenharia.com.br</a></p>
                     </div>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/5562993567625?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20sem%20compromisso!" class="whatsapp-button" target="_blank"> <!-- NÚMERO WPP: 5562993567625 - MENSAGEM WPP: Olá, gostaria de solicitar um orçamento sem compromisso! -->
+                        <i class="fab fa-whatsapp"></i>
+                        Economize tempo e dinheiro faça o seu orçamento sem compromisso!
+                    </a>
+                    <a href="mailto:contato@vigacoengenharia.com.br" class="email-button">
+                        <i class="fas fa-envelope"></i>
+                        Envie um Email
+                    </a>
                 </div>
             </div>
             <div style="text-align:center;margin:2.5rem 0 0 0;">
@@ -433,7 +513,6 @@
                     <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;color:#3498db;font-weight:600;font-size:1.1rem;">
                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:28px;height:28px;"> LinkedIn
                     </a>
-                    <!-- Seu link aqui: <a href="#" target="_blank">Outra Rede</a> -->
                 </div>
             </div>
         </section>
@@ -448,7 +527,6 @@
             <div class="social-links">
                 <a href="https://www.instagram.com/vigaco.eng/" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <!-- Seu link aqui: <a href="#" target="_blank"><i class="fab fa-xxx"></i></a> -->
             </div>
         </div>
         <div class="footer-bottom">
