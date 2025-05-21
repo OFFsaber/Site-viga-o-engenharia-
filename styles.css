@@ -701,4 +701,50 @@ body {
     .detalhe-servico-header h2 {
         font-size: 1.2rem;
     }
+}
+
+.about-maps-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 18px;
+}
+
+.about-side-image {
+    width: 340px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0002;
+}
+
+.about-maps-flex a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #0002;
+    transition: box-shadow 0.2s;
+}
+
+.about-maps-flex a:hover {
+    box-shadow: 0 6px 24px #0003;
+}
+
+.about-maps-flex iframe {
+    width: 340px;
+    height: 180px;
+    border: none;
+}
+
+@media (max-width: 900px) {
+    .about-maps-flex {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .about-side-image, .about-maps-flex iframe {
+        width: 98vw;
+        max-width: 98vw;
+        height: 160px;
+    }
 } 
