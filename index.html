@@ -803,6 +803,49 @@
         document.addEventListener('DOMContentLoaded', initCarousel);
 
         // Renderizar as miniaturas dos parceiros
+        // Array com os caminhos das imagens dos parceiros
+        const parceiros = [
+            "vigaço img/parceiros/AVATIM.png",
+            "vigaço img/parceiros/PREFRIANAPOLIS.png",
+            "vigaço img/parceiros/KRAFT HEINZ.png",
+            "vigaço img/parceiros/SINDICATO-RURAL-DE-ANAPOLIS.png",
+            "vigaço img/parceiros/RIANAPOLIS1.png",
+            "vigaço img/parceiros/SANTYA-RITA-DO-NOVO-DESTINO.png",
+            "vigaço img/parceiros/POLICORDAS.png",
+            "vigaço img/parceiros/PREF EDEIA.png",
+            "vigaço img/parceiros/PREF VILA PROPICIO.png",
+            "vigaço img/parceiros/OTIMZE SALAS LIMPAS.png",
+            "vigaço img/parceiros/COLATEXX COLORE.jpg",
+            "vigaço img/parceiros/KELDRIN.png",
+            "vigaço img/parceiros/PREF ITUMBIARA.png",
+            "vigaço img/parceiros/GRUPO-JOSE-ALVES.jpeg",
+            "vigaço img/parceiros/INSTITUTO DA SAUDE.png",
+            "vigaço img/parceiros/IQ UFG.png",
+            "vigaço img/parceiros/PREF GOIANAPOLIS.jpg",
+            "vigaço img/parceiros/CARREFOUR.png",
+            "vigaço img/parceiros/COCA COLA.png",
+            "vigaço img/parceiros/BREJEIRO.png",
+            "vigaço img/parceiros/CALDAS-NOVAS.png",
+            "vigaço img/parceiros/CANAL-GESTAO.png",
+            "vigaço img/parceiros/BRAINFARMA.png",
+            "vigaço img/parceiros/BRASIL-PARK-SHOPPING.png",
+            "vigaço img/parceiros/EXP.jpg",
+            "vigaço img/parceiros/BRAGA ENGENHARIA.png",
+            "vigaço img/parceiros/PREF ABADIANIA.png",
+            "vigaço img/parceiros/ADUBOS ARAGUAIA.png",
+            "vigaço img/parceiros/BRAGA-ENGENHARIA.jpg",
+            "vigaço img/parceiros/DEYE.jpg",
+            "vigaço img/parceiros/APsystems.jpg",
+            "vigaço img/parceiros/GROWATT.png",
+            "vigaço img/parceiros/OSDN SOLAR.jpg",
+            "vigaço img/parceiros/OSDA.png",
+            "vigaço img/parceiros/sunova.jpg",
+            "vigaço img/parceiros/TOPSOLAR.png",
+            "vigaço img/parceiros/aldo solar.png",
+            "vigaço img/parceiros/NANO ENRGI.png",
+            "vigaço img/parceiros/SOLFACIL.png"
+        ];
+
         const grid = document.getElementById('partnersGrid');
         if (grid) {
             parceiros.forEach(src => {
