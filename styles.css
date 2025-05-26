@@ -40,17 +40,20 @@ body {
     background: #111;
     border-radius: 8px;
 }
+.logo-text h1,
+.logo-text span,
+h1, h2, h3, h4, h5, h6, .nav-menu a, .cta-button {
+    font-family: 'Oswald', Arial, sans-serif !important;
+}
 .logo-text h1 {
     font-size: 2rem;
     color: #FFD700;
     margin-bottom: 0;
-    font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
 }
 .logo-text span {
     font-size: 0.9rem;
     color: #FFD700;
-    font-family: 'Roboto', serif;
     letter-spacing: 1px;
 }
 

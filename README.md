@@ -30,6 +30,21 @@ Site institucional moderno e responsivo para a empresa Viga & Engenharia, especi
 └── README.md          # Documentação
 ```
 
+## Funcionalidades e Recursos do Site
+
+- **Menu Mobile Responsivo:** Navegação adaptada para dispositivos móveis, com botão de hambúrguer e exibição dinâmica.
+- **Scroll Suave:** Rolagem suave para todas as âncoras internas, melhorando a experiência do usuário.
+- **Header Inteligente:** O cabeçalho esconde e aparece automaticamente conforme o usuário rola a página.
+- **Animações de Entrada:** Cards de serviços, projetos, sobre e contato animam ao aparecer na tela.
+- **Carrossel de Projetos (Imagens e Vídeos):** Suporte a imagens e vídeos, miniaturas interativas e autoplay inteligente.
+- **Galeria Dinâmica de Parceiros:** Parceiros carregados automaticamente da pasta `imagens-servicos/EMPRESAS PARCEIRAS`.
+- **Formulário de Contato com Feedback Visual:** Feedback de envio e reset automático após envio simulado.
+- **Botões de Ação Rápida:** WhatsApp e e-mail com mensagens automáticas e integração direta.
+- **Seção de Serviços Dinâmica:** Serviços renderizados via JavaScript, facilitando expansão e manutenção.
+- **Páginas Individuais de Serviços:** Cada serviço tem página dedicada com carrossel, depoimentos e botão de WhatsApp.
+- **Organização de Mídias:** Imagens e vídeos organizados em pastas temáticas por serviço.
+- **Design Moderno e Customizado:** Cards, modais, grids responsivos, botões animados e banners com gradiente.
+
 ## Como Usar
 
 1. Clone este repositório
@@ -55,4 +70,5 @@ Para contribuir com o projeto:
 
 ## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes. 
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
