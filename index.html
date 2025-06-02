@@ -32,8 +32,13 @@
             width: auto;
             border-radius: 8px;
         }
-        .logo-text h1 {
-            font-size: 2.6rem;
+        .logo-text h1, .logo-text span {
+            color: #808080;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            text-shadow:
+                1px 2px 6px #2224,
+                0 1px 0 #fff8;
         }
         .nav-menu {
             flex-wrap: nowrap;
@@ -180,16 +185,20 @@
             flex-shrink: 0;
         }
 
-        .carousel-slide img,
-        .carousel-slide video {
+        .carousel-slide img {
             width: 100%;
             height: 500px;
-            object-fit: cover;
+            object-fit: contain;
+            background: #fff;
             display: block;
         }
 
         .carousel-slide video {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
             background: #000;
+            display: block;
         }
 
         .carousel-button {
@@ -422,13 +431,143 @@
                 max-height: 80px;
             }
         }
+        .contact-mix-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+        .contact-info-mix {
+            flex: 1 1 320px;
+            min-width: 280px;
+            max-width: 400px;
+        }
+        .contact-map-mix {
+            flex: 1 1 320px;
+            min-width: 280px;
+            max-width: 480px;
+        }
+        .contact-social {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.2rem;
+        }
+        .contact-social a {
+            color: #3498db;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 900px) {
+            .contact-mix-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-map-mix {
+                max-width: 98vw;
+            }
+        }
+        .contact-mix-3col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-logo-col {
+            flex: 1 1 180px;
+            min-width: 180px;
+            max-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .contact-info-mix {
+            flex: 2 1 320px;
+            min-width: 280px;
+            max-width: 400px;
+            background: none;
+        }
+        .contact-map-mix {
+            flex: 2 1 320px;
+            min-width: 280px;
+            max-width: 480px;
+        }
+        .contact-social {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.2rem;
+        }
+        .contact-social a {
+            color: #3498db;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .contact-info-mix .info-item a,
+        .contact-info-mix .info-item p {
+            color: #fff;
+        }
+        .contact-info-mix .info-item a[href^='mailto:'] {
+            color: #3498db;
+        }
+        .contact-info-mix .info-item a[href^='tel:'] {
+            color: #3498db;
+        }
+        .contact-info-mix .info-item a[href*='wa.me'] {
+            color: #25d366;
+        }
+        .contact-info-mix .info-item i {
+            color: #3498db;
+        }
+        .whatsapp-button {
+            background-color: #25d366;
+            color: #fff;
+        }
+        .email-button {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .whatsapp-button:hover, .email-button:hover {
+            filter: brightness(1.1);
+        }
+        @media (max-width: 1100px) {
+            .contact-mix-3col {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            .contact-logo-col, .contact-info-mix, .contact-map-mix {
+                max-width: 98vw;
+            }
+            .contact-logo-col {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .contact-texture-bg {
+            background: linear-gradient(160deg, #444 0%, #666 100%), url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-repeat: repeat;
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Logo VIGAÇO" class="logo-img">
+                <img src="logo.jpg" alt="Logo VIGAÇO" class="logo-img">
                 <div class="logo-text">
                     <h1>VIGAÇO</h1>
                     <span>ENGENHARIA & PROJETOS</span>
@@ -603,42 +742,49 @@
             <div class="partners-grid" id="partnersGrid"></div>
         </section>
 
-        <section id="contato" class="contact">
-            <h2>Entre em Contato</h2>
-            <div class="contact-container">
-                <div class="contact-info">
+        <section id="contato" class="contact contact-texture-bg" style="padding:3rem 0 2.5rem 0;">
+            <div class="contact-mix-3col">
+                <!-- Coluna 1: Logo -->
+                <div class="contact-logo-col">
+                    <img src="Adesivo.png" alt="Logo VIGAÇO" style="max-width:180px;width:100%;height:auto;display:block;margin:0 auto;">
+                </div>
+                <!-- Coluna 2: Informações e botões -->
+                <div class="contact-info-mix">
+                    <h2 style="color:#fff;text-align:center;margin-bottom:1.5rem;">Entre em Contato</h2>
                     <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>RUA PB 08 QD. 43 LT. 05 E 06 PARQUE BRASÍLIA 2ª ETAPA ANÁPOLIS-GO CEP: 75.093-760</p>
+                        <i class="fas fa-map-marker-alt" style="color:#3498db;"></i>
+                        <p style="color:#fff;">RUA PB 08 QD. 43 LT. 05 E 06<br>PARQUE BRASÍLIA 2ª ETAPA<br>ANÁPOLIS-GO CEP: 75.093-760</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/556292923252?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20sem%20compromisso!" target="_blank" style="color:#25d366;font-weight:600;">(62) 9292-3252</a>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <p><a href="https://wa.me/556292923252?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 9292-3252</a></p>
+                        <a href="tel:6233174581" style="color:#3498db;font-weight:600;">(62) 3317-4581</a>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p><a href="mailto:vigacoengenharia@gmail.com?subject=Quero%20um%20orçamento%20para%20o%20meu%20projeto&body=Olá,%20gostaria%20de%20fazer%20um%20orçamento.%20Podemos%20marcar%20um%20horário%20para%20falarmos%20sobre?" style="color:#3498db;text-decoration:none;font-weight:600;">vigacoengenharia@gmail.com</a></p>
+                        <a href="mailto:vigacoengenharia@gmail.com?subject=Quero%20um%20orçamento%20para%20o%20meu%20projeto&body=Olá,%20gostaria%20de%20fazer%20um%20orçamento.%20Podemos%20marcar%20um%20horário%20para%20falarmos%20sobre?" style="color:#3498db;font-weight:600;">vigacoengenharia@gmail.com</a>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/556292923252?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20sem%20compromisso!" class="whatsapp-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Economize tempo e dinheiro, faça o seu orçamento sem compromisso!
+                        </a>
+                        <a href="mailto:vigacoengenharia@gmail.com?subject=Quero%20um%20orçamento%20para%20o%20meu%20projeto&body=Olá,%20gostaria%20de%20fazer%20um%20orçamento.%20Podemos%20marcar%20um%20horário%20para%20falarmos%20sobre?" class="email-button">
+                            <i class="fas fa-envelope"></i>
+                            Envie um Email
+                        </a>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/vigaco.eng/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
-                <div class="contact-buttons">
-                    <a href="https://wa.me/556292923252?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20sem%20compromisso!" class="whatsapp-button" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        Economize tempo e dinheiro, faça o seu orçamento sem compromisso!
-                    </a>
-                    <a href="mailto:vigacoengenharia@gmail.com?subject=Quero%20um%20orçamento%20para%20o%20meu%20projeto&body=Olá,%20gostaria%20de%20fazer%20um%20orçamento.%20Podemos%20marcar%20um%20horário%20para%20falarmos%20sobre?" class="email-button">
-                        <i class="fas fa-envelope"></i>
-                        Envie um Email
-                    </a>
-                </div>
-            </div>
-            <div style="text-align:center;margin:2.5rem 0 0 0;">
-                <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.2rem;">
-                    <a href="https://www.instagram.com/vigaco.eng/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;color:#3498db;font-weight:600;font-size:1.1rem;">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:28px;height:28px;"> Instagram
-                    </a>
-                    <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;color:#3498db;font-weight:600;font-size:1.1rem;">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:28px;height:28px;"> LinkedIn
-                    </a>
+                <!-- Coluna 3: Mapa Google -->
+                <div class="contact-map-mix">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.23496429581!2d-48.92037268468744!3d-16.32623328872659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ea51ea967adbb%3A0x34e69e98b2969765!2sVigaço+Engenharia!5e0!3m2!1spt-BR!2sbr!4v1718212345678!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:320px;border-radius:12px;border:none;"></iframe>
                 </div>
             </div>
         </section>
@@ -667,16 +813,35 @@
             'imagens-servicos/arquitetura/ARC019.png',
             'imagens-servicos/arquitetura/ARC030.jpg',
             'imagens-servicos/arquitetura/ARC027.jpg',
-            'imagens-servicos/SOLAR/SOL003.jpg',
+            'imagens-servicos/OBRAS/EXEC010.jpg',
             'imagens-servicos/SOLAR/SOL004.jpg',
-            'imagens-servicos/SOLAR/SOL005.jpg',
+            'imagens-servicos/OBRAS/EXEC032.jpg',
+            'imagens-servicos/OBRAS/EXEC033.jpg',
+            'imagens-servicos/OBRAS/EXEC034.jpg',
+            'imagens-servicos/OBRAS/OBR029.jpg',
+            'imagens-servicos/OBRAS/OBR041.jpg',
+            'imagens-servicos/arquitetura/ARS001.png' ,
+            'imagens-servicos/arquitetura/ARS002.png' ,
+            'imagens-servicos/arquitetura/ARS003.png' ,
+            'imagens-servicos/arquitetura/ARS004.png' ,
+            'imagens-servicos/arquitetura/ARS005.png' ,
+            'imagens-servicos/arquitetura/ARS006.png' ,
+            'imagens-servicos/arquitetura/ARS007.png' ,
+            'imagens-servicos/arquitetura/ARS008.png' ,
+            'imagens-servicos/arquitetura/ARS009.png' ,
+            'imagens-servicos/arquitetura/ARS011.png' ,
+            'imagens-servicos/OBRAS/OBR078.jpg',
+            'imagens-servicos/OBRAS/OBR079.jpg',
+            'imagens-servicos/OBRAS/OBR080.jpg',
             'imagens-servicos/SOLAR/SOL006.jpg',
             'imagens-servicos/SOLAR/SOL007.jpg',
             'imagens-servicos/SOLAR/SOL008.jpg',
             'imagens-servicos/SOLAR/SOL009.jpg',
             'imagens-servicos/arquitetura/ARC038.jpg',
-            { src: 'imagens-servicos/eletrico/EL002.mp4', thumb: 'imagens-servicos/eletrico/EL001.jpeg' },            
-            { src: 'imagens-servicos/eletrico/EL006.mp4', thumb: 'imagens-servicos/eletrico/EL001.jpeg' }
+            { src: 'imagens-servicos/eletrico/EL002.mp4', thumb: 'imagens-servicos/eletrico/EL001.jpeg' },   
+            { src: 'imagens-servicos/estrutural-metalico/ESTM013.mp4', thumb: 'imagens-servicos/eletrico/EL001.jpeg' }, 
+            { src: 'imagens-servicos/estrutural-metalico/ESTM015.mp4', thumb: 'imagens-servicos/eletrico/EL001.jpeg' },          
+            { src: 'imagens-servicos/estrutural-metalico/ESTM014.mp4', thumb: 'imagens-servicos/eletrico/EL001.jpeg' }
         ];
 
         // Função para verificar se é um vídeo
@@ -815,32 +980,31 @@
         // Array com os caminhos das imagens dos parceiros
         const parceiros = [
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR001.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR002.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR003.jpg",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR004.jpg",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR005.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR006.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR027.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR002.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR010.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR011.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR020.jpg",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR019.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR005.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR007.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR008.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR009.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR010.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR011.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR012.jpeg",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR013.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR014.jpg",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR015.jpeg",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR016.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR017.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR018.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR019.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR020.jpg",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR021.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR022.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR023.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR024.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR016.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR025.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR026.png",
-            "imagens-servicos/EMPRESAS PARCEIRAS/PAR027.png",
+            "imagens-servicos/EMPRESAS PARCEIRAS/PAR004.jpg",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR028.jpg",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR029.png",
             "imagens-servicos/EMPRESAS PARCEIRAS/PAR030.jpg",
