@@ -561,9 +561,66 @@
             background-size: cover;
             background-repeat: repeat;
         }
+        /* NAVBAR FULL WIDTH E LOGO MAIOR */
+        .top-contact-bar {
+            background: #2c3e50;
+            padding: 8px 0;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .top-contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .top-contact-item {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .top-contact-item:hover {
+            color: #3498db;
+        }
+
+        .top-contact-item i {
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .top-contact-bar {
+                font-size: 0.8rem;
+                padding: 6px 0;
+            }
+            
+            .top-contact-container {
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="top-contact-bar">
+        <div class="top-contact-container">
+            <a href="https://www.google.com/maps/place/Vigaço+Engenharia/@-16.326233,-48.918184,14z/data=!4m14!1m7!3m6!1s0x935ea51ea967adbb:0x34e69e98b2969765!2sVigaço+Engenharia!8m2!3d-16.3262333!4d-48.9181837!16s%2Fg%2F11vxmd876c!3m5!1s0x935ea51ea967adbb:0x34e69e98b2969765!8m2!3d-16.3262333!4d-48.9181837!16s%2Fg%2F11vxmd876c!5m1!1e1?hl=pt-BR&entry=ttu" target="_blank" class="top-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                RUA PB 08 QD. 43 LT. 05 E 06, PARQUE BRASÍLIA 2ª ETAPA, ANÁPOLIS-GO
+            </a>
+            <a href="mailto:vigacoengenharia@gmail.com?subject=Quero%20um%20orçamento%20para%20o%20meu%20projeto&body=Olá,%20gostaria%20de%20fazer%20um%20orçamento.%20Podemos%20marcar%20um%20horário%20para%20falarmos%20sobre?" class="top-contact-item">
+                <i class="fas fa-envelope"></i>
+                vigacoengenharia@gmail.com
+            </a>
+        </div>
+    </div>
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -579,14 +636,14 @@
                     <a href="#servicos">Nossos Serviços <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="servico-arquitetura.html" target="_blank">Arquitetura</a></li>
-                        <li><a href="servico-eletrico.html" target="_blank">Elétrico</a></li>
-                        <li><a href="servico-hidrossanitario.html" target="_blank">Hidrossanitário</a></li>
-                        <li><a href="servico-cabeamento.html" target="_blank">Cabeamento Estruturado</a></li>
                         <li><a href="servico-estrutural-metalico.html" target="_blank">Estrutural Metálico</a></li>
                         <li><a href="servico-estrutural-concreto.html" target="_blank">Estrutural em Concreto Armado</a></li>
+                        <li><a href="servico-eletrico.html" target="_blank">Elétrico</a></li>
+                        <li><a href="servico-hidrossanitario.html" target="_blank">Hidrossanitário</a></li>
+                        <li><a href="servico-laudos.html" target="_blank">Laudos Técnicos</a></li>
+                        <li><a href="servico-cabeamento.html" target="_blank">Cabeamento Estruturado</a></li>
                         <li><a href="servico-muro.html" target="_blank">Muro de Contenções</a></li>
                         <li><a href="servico-ar-condicionado.html" target="_blank">Ar-Condicionado</a></li>
-                        <li><a href="servico-laudos.html" target="_blank">Laudos Técnicos</a></li>
                     </ul>
                 </li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
@@ -597,6 +654,9 @@
             <div class="nav-social">
                 <a href="https://www.instagram.com/vigaco.eng/" target="_blank" title="Instagram" style="margin-right:10px;"><i class="fab fa-instagram" style="font-size:1.6rem;color:#3498db;"></i></a>
                 <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="font-size:1.6rem;color:#3498db;"></i></a>
+                <a href="https://sketchfab.com/jefferson.engcivil" target="_blank" title="Sketchfab" style="margin-left:10px;display:inline-flex;align-items:center;">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#1CAAD9"/><path d="M16.01 7.5c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65z" fill="#fff"/></svg>
+                </a>
             </div>
             <div class="top-contact">
                 <i class="fas fa-phone"></i> <a href="https://wa.me/556292923252?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20para%20falar%20com%20um%20consultor%20da%20Vigaço!" style="color:#25d366;text-decoration:none;font-weight:600;" target="_blank">(62) 9292-3252</a>
@@ -619,29 +679,12 @@
         <section id="servicos" class="services">
             <h2>Nossos Serviços</h2>
             <div class="services-grid">
+                <!-- Serviços Prioritários -->
                 <div class="service-card" onclick="window.open('servico-arquitetura.html', '_blank')">
                     <img src="imagens-servicos/arquitetura/ARC003.png" alt="Projeto Arquitetônico" class="service-image">
                     <i class="fas fa-drafting-compass"></i>
                     <h3>Arquitetura</h3>
                     <p>Projetos arquitetônicos completos, funcionais e modernos que transformam espaços em ambientes extraordinários.</p>
-                </div>
-                <div class="service-card" onclick="window.open('servico-eletrico.html', '_blank')">
-                    <img src="imagens-servicos/eletrico/EL001.jpeg" alt="Projeto Elétrico" class="service-image">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Elétrico</h3>
-                    <p>Projetos elétricos residenciais, comerciais e industriais com foco em segurança e eficiência energética.</p>
-                </div>
-                <div class="service-card" onclick="window.open('servico-hidrossanitario.html', '_blank')">
-                    <img src="imagens-servicos/hidrossanitario/HID013.jpg" alt="Projeto Hidrossanitário" class="service-image">
-                    <i class="fas fa-tint"></i>
-                    <h3>Hidrossanitário</h3>
-                    <p>Soluções eficientes para instalações hidráulicas e sanitárias, garantindo conforto e sustentabilidade.</p>
-                </div>
-                <div class="service-card" onclick="window.open('servico-cabeamento.html', '_blank')">
-                    <img src="imagens-servicos/cabeamento/CA001.jpeg" alt="Cabeamento Estruturado" class="service-image">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Cabeamento Estruturado</h3>
-                    <p>Infraestrutura de redes e comunicação para sua obra.</p>
                 </div>
                 <div class="service-card" onclick="window.open('servico-estrutural-metalico.html', '_blank')">
                     <img src="imagens-servicos/OBRAS/OBR115.png" alt="Estrutural Metálico" class="service-image">
@@ -655,6 +698,31 @@
                     <h3>Estrutural em Concreto Armado</h3>
                     <p>Projetos estruturais robustos e seguros.</p>
                 </div>
+                <div class="service-card" onclick="window.open('servico-eletrico.html', '_blank')">
+                    <img src="imagens-servicos/eletrico/EL001.jpeg" alt="Projeto Elétrico" class="service-image">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Elétrico</h3>
+                    <p>Projetos elétricos residenciais, comerciais e industriais com foco em segurança e eficiência energética.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-hidrossanitario.html', '_blank')">
+                    <img src="imagens-servicos/hidrossanitario/HID013.jpg" alt="Projeto Hidrossanitário" class="service-image">
+                    <i class="fas fa-tint"></i>
+                    <h3>Hidrossanitário</h3>
+                    <p>Soluções eficientes para instalações hidráulicas e sanitárias, garantindo conforto e sustentabilidade.</p>
+                </div>
+                <div class="service-card" onclick="window.open('servico-laudos.html', '_blank')">
+                    <img src="imagens-servicos/laudos/LAU001.jpeg" alt="Laudos Técnicos" class="service-image">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Laudos Técnicos</h3>
+                    <p>Emissão de laudos e pareceres técnicos especializados.</p>
+                </div>
+                <!-- Serviços Adicionais -->
+                <div class="service-card" onclick="window.open('servico-cabeamento.html', '_blank')">
+                    <img src="imagens-servicos/cabeamento/CA001.jpeg" alt="Cabeamento Estruturado" class="service-image">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Cabeamento Estruturado</h3>
+                    <p>Infraestrutura de redes e comunicação para sua obra.</p>
+                </div>
                 <div class="service-card" onclick="window.open('servico-muro.html', '_blank')">
                     <img src="imagens-servicos/muro/MU001.jpeg" alt="Muro de Contenções" class="service-image">
                     <i class="fas fa-mountain"></i>
@@ -666,12 +734,6 @@
                     <i class="fas fa-snowflake"></i>
                     <h3>Ar-Condicionado</h3>
                     <p>Projetos de climatização eficientes e econômicos.</p>
-                </div>
-                <div class="service-card" onclick="window.open('servico-laudos.html', '_blank')">
-                    <img src="imagens-servicos/laudos/LAU001.jpeg" alt="Laudos Técnicos" class="service-image">
-                    <i class="fas fa-file-alt"></i>
-                    <h3>Laudos Técnicos</h3>
-                    <p>Emissão de laudos e pareceres técnicos especializados.</p>
                 </div>
             </div>
         </section>
@@ -688,6 +750,7 @@
 
         <section id="projetos" class="projects">
             <h2>Projetos em Destaque</h2>
+            
             <div class="carousel-container">
                 <div class="carousel-wrapper">
                     <div class="carousel-slides" id="carouselSlides">
@@ -704,6 +767,15 @@
                     <!-- Miniaturas serão inseridas via JavaScript -->
                 </div>
             </div>
+                   <!-- Frase Sketchfab (abaixo do carrossel) -->
+        <div style="text-align:center;margin:32px 0 0 0;font-size:1.25rem;font-weight:500;">
+            <a href="https://sketchfab.com/jefferson.engcivil" target="_blank" style="color:#3498db;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+                Veja mais dos nossos projetos no Sketchfab
+                <span style="display:inline-flex;align-items:center;vertical-align:middle;">
+                    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="16" cy="16" r="16" fill="#1CAAD9"/><path d="M16.01 7.5c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65z" fill="#fff"/></svg>
+                </span>
+            </a>
+        </div>
         </section>
 
         <section id="sobre" class="about">
@@ -780,6 +852,10 @@
                     <div class="contact-social">
                         <a href="https://www.instagram.com/vigaco.eng/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
                         <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://sketchfab.com/jefferson.engcivil" target="_blank" title="Sketchfab" style="display:inline-flex;align-items:center;gap:4px;">
+                            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="16" cy="16" r="16" fill="#1CAAD9"/><path d="M16.01 7.5c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65z" fill="#fff"/></svg>
+                            Sketchfab
+                        </a>
                     </div>
                 </div>
                 <!-- Coluna 3: Mapa Google -->
@@ -788,6 +864,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Frase Sketchfab (abaixo do carrossel) -->
+        <div style="text-align:center;margin:32px 0 0 0;font-size:1.25rem;font-weight:500;">
+            <a href="https://sketchfab.com/jefferson.engcivil" target="_blank" style="color:#3498db;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+                Veja mais dos nossos projetos no Sketchfab
+                <span style="display:inline-flex;align-items:center;vertical-align:middle;">
+                    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="16" cy="16" r="16" fill="#1CAAD9"/><path d="M16.01 7.5c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65z" fill="#fff"/></svg>
+                </span>
+            </a>
+        </div>
     </main>
 
     <footer class="footer">
@@ -799,6 +885,9 @@
             <div class="social-links">
                 <a href="https://www.instagram.com/vigaco.eng/" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/jefferson-alves-da-costa-9442aab2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://sketchfab.com/jefferson.engcivil" target="_blank" title="Sketchfab" style="display:inline-flex;align-items:center;">
+                    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#1CAAD9"/><path d="M16.01 7.5c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65zm7.67 4.49c-4.7 0-8.51 2.01-8.51 4.49 0 1.44 1.56 2.73 4.01 3.56v-2.13c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.47c.97.23 2.06.38 3.22.41v-6.01c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v6.01c1.16-.03 2.25-.18 3.22-.41v-2.47c0-.23.19-.42.42-.42h.01c.23 0 .42.19.42.42v2.13c2.45-.83 4.01-2.12 4.01-3.56 0-2.48-3.81-4.49-8.51-4.49zm-7.67 4.49c0-1.7 3.43-3.65 7.67-3.65s7.67 1.95 7.67 3.65c0 1.7-3.43 3.65-7.67 3.65s-7.67-1.95-7.67-3.65z" fill="#fff"/></svg>
+                </a>
             </div>
         </div>
         <div class="footer-bottom">
