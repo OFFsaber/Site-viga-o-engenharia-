@@ -750,4 +750,26 @@ h1, h2, h3, h4, h5, h6, .nav-menu a, .cta-button {
         max-width: 98vw;
         height: 160px;
     }
+}
+
+/* Animação da Logo ELSE */
+.else-logo {
+    animation: floatAnimation 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.else-logo:hover {
+    transform: scale(1.1);
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 } 
